@@ -1,0 +1,28 @@
+@model EmployeesViewModels
+
+@{
+    ViewData["Title"] = "Delete employee";
+}
+
+<h1>Delete employee</h1>
+
+<div class="list-group">
+    <div class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">@Html.DisplayFor(model => model.FirstName)</h5>
+            <small>Id: @Html.DisplayFor(model => model.Id)</small>
+        </div>
+        <p class="mb-1">
+            @Html.DisplayFor(model => model.LastName)
+        </p>
+        <small>
+            Birthday: @Html.DisplayFor(model => model.Birthday)
+        </small>
+    </div>
+</div>
+
+<h3>Are you sure you want to delete this employee?</h3>
+
+<a asp-action="DeleteConfirm" asp-route-id="@Model.Id" type="button" class="btn btn-danger">
+    Yes, delete it
+</a>

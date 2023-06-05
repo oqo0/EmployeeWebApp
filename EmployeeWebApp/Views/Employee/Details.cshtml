@@ -1,0 +1,22 @@
+@model EmployeesViewModels
+
+@{
+    ViewData["Title"] = "Employee details";
+}
+
+<h1>Employee details</h1>
+
+<div class="list-group">
+    <div class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">@Html.DisplayFor(model => model.FirstName)</h5>
+            <small>Id: @Html.DisplayFor(model => model.Id)</small>
+        </div>
+        <p class="mb-1">
+            @Html.DisplayFor(model => model.LastName)
+        </p>
+        <small>
+            Birthday: @Html.DisplayFor(model => model.Birthday)
+        </small>
+    </div>
+</div>
